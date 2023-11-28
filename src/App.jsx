@@ -1,23 +1,43 @@
-import { useState } from 'react'
-import './App.css'
+import { Header } from './components/Header'
+import {Carousel} from 'react-bootstrap'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const imagesSlide = ['bg-motor-zone-busniness.jpg', 'bg-fachada-motor.jpg', 'bg-fachada-motor-2.jpg', 'bg-fachada-motor-3.jpg'];
 
   return (
     <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+
+      <main className='mt-5'>
+        <section className='hero py-5'>
+          <Carousel className='overflow-hidden'>
+          {
+            imagesSlide.map((img, iter) => (
+                <Carousel.Item key={iter}>
+                  <img src={`/src/assets/${img}`} alt="Motor Zone" width={"100%"} height={240} />
+                  <Carousel.Caption>
+                    <h3></h3>
+                    <p></p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+            ))
+          }
+          </Carousel>
+        </section>
+
+        <section className='marca py-5'>
+          <h6 className='text-center fs-5 fw-semibold'>Marcas con las que trabajamos</h6>
+        </section>
+
+        <section className='marca py-5'>
+          <h6 className='text-center fs-5 fw-semibold'>Marcas con las que trabajamos</h6>
+        </section>
+
+        <section className='marca py-5'>
+          <h6 className='text-center fs-5 fw-semibold'>Marcas con las que trabajamos</h6>
+        </section>
+      </main>
+
     </>
   )
 }

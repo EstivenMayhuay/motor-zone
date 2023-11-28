@@ -1,16 +1,21 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --bg-motor-primary: #000000; 
+  --bg-motor-second: #DF224E; 
+  --bg-motor-third: #E8F5E6; 
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  scroll-behavior: smooth;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.bg-primary-motor {
+  background-color: #000000;
+}
+
+.bg-second-motor {
+  background-color: #DF224E;
+}
+
+.bg-third-motor {
+  background-color: #E8F5E6;
 }
 
 a {
@@ -52,6 +57,28 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.carousel {
+  border-radius: 1.25rem;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  /* background-color: var(--bg-motor-second); */
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel {
+    width: calc(90% - 2rem);
+    margin: auto;
+  }
+
+  .carousel-item img {
+    height: 420px;
+  }
 }
 
 @media (prefers-color-scheme: light) {
