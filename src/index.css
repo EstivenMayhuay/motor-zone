@@ -1,6 +1,6 @@
 :root {
   --bg-motor-primary: #000000; 
-  --bg-motor-second: #DF224E; 
+  --bg-motor-second: rgba(223, 32, 77, 1);
   --bg-motor-third: #E8F5E6; 
 
   scroll-behavior: smooth;
