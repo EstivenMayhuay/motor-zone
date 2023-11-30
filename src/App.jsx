@@ -1,5 +1,6 @@
-import { Header } from './components/Header'
-import {Carousel} from 'react-bootstrap'
+import { Header } from './components/Header';
+import {Carousel} from 'react-bootstrap';
+import {URL_APP} from './constants.js';
 
 function App() {
   const imagesSlide = ['bg-motor-zone-busniness.jpg', 'bg-fachada-motor.jpg', 'bg-fachada-motor-2.jpg', 'bg-fachada-motor-3.jpg'];
@@ -14,7 +15,7 @@ function App() {
           {
             imagesSlide.map((img, iter) => (
                 <Carousel.Item key={iter}>
-                  <img src={`/src/assets/${img}`} alt="Motor Zone" width={"100%"} height={240} />
+                  <img src={`${URL_APP}/images/${img}`} alt="Motor Zone" width={"100%"} height={240} />
                   <Carousel.Caption>
                     <h3></h3>
                     <p></p>
