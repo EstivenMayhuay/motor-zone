@@ -1,3 +1,4 @@
+import { ButtonWhatsapp } from './components/ButtonWhatsapp';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
@@ -46,9 +47,12 @@ function App() {
 
   return (
     <>
+      {/* Header */}
       <Header />
 
+      {/* Main */}
       <main>
+        {/* Hero */}
         <section className='heroSection'>
           <Hero />
         </section>
@@ -69,7 +73,10 @@ function App() {
         </section>
       </main>
 
+      {/* Footer */}
       <Footer />
+
+      <ButtonWhatsapp />
     </>
   )
 }
