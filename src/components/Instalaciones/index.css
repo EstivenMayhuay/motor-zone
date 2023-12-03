@@ -1,0 +1,31 @@
+.instalaciones__gallery {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 2rem;
+    cursor: pointer;
+}
+
+.instalaciones__gallery .cardPhoto img, .modalInstalaciones__body img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-content {
+    border: 0 !important;
+}
+
+@media screen and (min-width: 768px) {
+    .instalaciones__gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .instalaciones__gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

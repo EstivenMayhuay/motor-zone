@@ -1,19 +1,53 @@
 :root {
-  --bg-motor-primary: #000000; 
+  --bg-motor-primary: rgba(20, 20, 20, 1); 
   --bg-motor-second: rgba(223, 32, 77, 1);
   --bg-motor-third: #E8F5E6; 
 
   scroll-behavior: smooth;
+
+  box-sizing: border-box;
 }
 
 .bg-primary-motor {
-  background-color: #000000;
+  background-color: var(--bg-motor-primary) !important;
 }
 
 .bg-second-motor {
-  background-color: #DF224E;
+  background-color: var(--bg-motor-second) !important;
 }
 
 .bg-third-motor {
-  background-color: #E8F5E6;
+  background-color: var(--bg-motor-third) !important;
+}
+
+.title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.65rem;
+  font-family: 'Raleway', sans-serif;
+  padding: 0 2rem 4rem 2rem;
+  text-wrap: wrap;
+  margin: 0 !important;
+}
+
+.paragraph,
+button,
+span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400 !important;
+}
+
+#servicios,
+#marcas,
+#instalaciones,
+.footer {
+  --p-section: 7rem;
+
+  padding-top: var(--p-section);
+  padding-bottom: var(--p-section);
 }

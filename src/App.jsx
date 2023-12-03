@@ -1,9 +1,11 @@
+import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { NuestrasInstalaciones } from './components/Instalaciones';
+import { Marcas } from './components/Marcas';
 import { NuestrosServicios } from './components/NuestrosServicios';
 
 function App() {
-  const imagesSlide = ['bg-motor-zone-busniness.jpg', 'bg-fachada-motor.jpg', 'bg-fachada-motor-2.jpg', 'bg-fachada-motor-3.jpg'];
   const servicios = [
     {
       id: 1,
@@ -12,12 +14,12 @@ function App() {
     },
     {
       id: 2,
-      name: "Reparacion de Motor",
+      name: "Reparación de Motor",
       img: "servicio-motor-car.jpg"
     },
     {
       id: 3,
-      name: "Diagnostico Computarizado - Scanner",
+      name: "Diagnóstico Computarizado - Scanner",
       img: "servicio-diagnostico-computarizado.jpg"
     },
     {
@@ -32,7 +34,7 @@ function App() {
     },
     {
       id: 6,
-      name: "Electronica",
+      name: "Electrónica",
       img: "servicio-electronica.png"
     },
     {
@@ -52,19 +54,22 @@ function App() {
         </section>
 
         {/* Nuestros Servicios */}
-        <section className='sectionServicios my-5'>
+        <section className='sectionServicios'>
           <NuestrosServicios servicios={servicios} />
         </section>
 
-        <section className='marca py-5'>
-          <h6 className='text-center fs-5 fw-semibold'>Marcas con las que trabajamos</h6>
+        {/* Marcas con la que trabajamos */}
+        <section className='sectionMarcas'>
+          <Marcas />
         </section>
 
-        <section className='marca py-5'>
-          <h6 className='text-center fs-5 fw-semibold'>Marcas con las que trabajamos</h6>
+        {/* Nuestra Instalaciones */}
+        <section className='sectionInstalaciones'>
+          <NuestrasInstalaciones />
         </section>
       </main>
 
+      <Footer />
     </>
   )
 }

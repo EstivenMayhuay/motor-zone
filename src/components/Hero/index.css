@@ -1,0 +1,53 @@
+#hero {
+    position: relative;
+}
+
+#hero .image {
+    min-height: auto;
+    background-image: url('../images/hero-principal.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    aspect-ratio: 16/9;
+}
+
+#hero::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(40, 40, 40, 0.5);
+}
+
+
+#hero .info {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero .info h3 {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size: 1.56rem;
+}
+
+@media screen and (min-width: 990px) {
+    #hero .image {
+        width: 100%;
+        height: 420px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    #hero .image {
+        height: 760px;
+    }
+}
