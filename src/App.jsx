@@ -46,7 +46,7 @@ function App() {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
 
       <main>
         <section className='heroSection'>

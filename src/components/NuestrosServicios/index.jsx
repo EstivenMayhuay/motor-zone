@@ -17,7 +17,7 @@ export const NuestrosServicios = ({
                     return <>
                         <Card className='bg-second-motor border-0 servicioCard' key={iter}>
                             <Card.Body className='position-relative servicioCard__body'>
-                                <p className='text-white paragraph m-0 px-2 text-break'>{servicio.name}</p>
+                                <p className='d-flex align-items-center text-white paragraph m-0 px-2 text-break'>{servicio.name}</p>
                                 <div className='text-right'>
                                     <img src="./images/icon-car.svg" alt="Motor Zone" width={32} height={32} className='' />
                                 </div>

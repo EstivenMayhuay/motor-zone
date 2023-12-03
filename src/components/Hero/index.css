@@ -3,12 +3,12 @@
 }
 
 #hero .image {
-    min-height: auto;
-    background-image: url('../images/hero-principal.jpeg');
+    min-height: 100vh;
+    background-image: url('../images/hero-main.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top left;
-    aspect-ratio: 16/9;
+    background-position: top center;
+    /* aspect-ratio: 16/9; */
 }
 
 #hero::after {
@@ -21,7 +21,6 @@
     background-color: rgba(40, 40, 40, 0.5);
 }
 
-
 #hero .info {
     position: absolute;
     z-index: 99;
@@ -33,21 +32,20 @@
     justify-content: center;
 }
 
-#hero .info h3 {
+#hero .info .title {
+    font-size: 2.25rem;
+}
+
+/* #hero .info h3 {
     font-family: 'Raleway', sans-serif;
     font-style: italic;
     font-size: 1.56rem;
-}
+} */
 
 @media screen and (min-width: 990px) {
-    #hero .image {
-        width: 100%;
-        height: 420px;
-    }
+
 }
 
 @media screen and (min-width: 2000px) {
-    #hero .image {
-        height: 760px;
-    }
+
 }
