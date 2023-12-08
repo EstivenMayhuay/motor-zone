@@ -1,11 +1,3 @@
-import { ButtonWhatsapp } from './components/ButtonWhatsapp';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { NuestrasInstalaciones } from './components/Instalaciones';
-import { Marcas } from './components/Marcas';
-import { NuestrosServicios } from './components/NuestrosServicios';
-
 function App() {
   const servicios = [
     {
@@ -47,36 +39,7 @@ function App() {
 
   return (
     <>
-      {/* Header */}
-      <Header />
-
-      {/* Main */}
-      <main>
-        {/* Hero */}
-        <section className='heroSection'>
-          <Hero />
-        </section>
-
-        {/* Nuestros Servicios */}
-        <section className='sectionServicios'>
-          <NuestrosServicios servicios={servicios} />
-        </section>
-
-        {/* Marcas con la que trabajamos */}
-        <section className='sectionMarcas'>
-          <Marcas />
-        </section>
-
-        {/* Nuestra Instalaciones */}
-        <section className='sectionInstalaciones'>
-          <NuestrasInstalaciones />
-        </section>
-      </main>
-
-      {/* Footer */}
-      <Footer />
-
-      <ButtonWhatsapp />
+      <h1>HOME</h1>
     </>
   )
 }
