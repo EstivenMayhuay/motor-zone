@@ -25,14 +25,14 @@ export const Header = ({
                 </div>
 
                 <div className="header__social w-100 d-flex justify-content-end">
-                    <ul className="list-inline m-0 p-0 d-flex align-items-center gap-2">
+                    <ul className="list-inline m-0 p-0 d-flex align-items-center gap-4">
                         <li>
-                            <a href="">
+                            <a href="https://www.facebook.com/MotorsZonePeru?mibextid=LQQJ4d" rel='noreferrer' target='_blank' title='Facebook Motor Zone'>
                                 <img src="./images/icon-facebook.svg" alt="Facebook Motor Zone" width={24} />
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="https://www.instagram.com/motorszoneperu/?igshid=YTQwZjQ0NmI0OA%3D%3D" rel='noreferrer' target='_blank' title='Instagram Motor Zone'>
                                 <img src="./images/icon-instagram.svg" alt="Instagram Motor Zone" width={24} />
                             </a>
                         </li>

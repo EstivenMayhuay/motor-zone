@@ -26,9 +26,6 @@
     width: 100%;
 }
 
-.header__button button {
-}
-
 .header__social {
     display: none !important;
 }
@@ -108,6 +105,13 @@
     a.header__link:hover,
     a.header__link.active {
         color: red !important;
+    }
+
+    .header__social ul li a:hover {
+        transition: 0.4s ease;
+        transform: scale(1.15);
+        filter: brightness(1.1);
+        box-shadow: 0 4px 4px rgba(0,0,0,0.25);
     }
     
     .header__link:last-child {
