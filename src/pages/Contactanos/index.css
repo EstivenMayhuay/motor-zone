@@ -1,0 +1,24 @@
+.contactanos article {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contactanos article .title {
+    position: relative;
+    padding-left: 1rem !important;
+}
+
+.contactanos article span strong {
+    color: var(--bg-motor-second);
+}
+
+.contactanos article .title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--bg-motor-second);
+}

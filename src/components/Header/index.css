@@ -12,7 +12,7 @@
 
 .header__title {
     width: 100%;
-    margin: 4rem 0;
+    margin: 6rem 0;
     text-align: center;
     color: white;
     font-weight: 600;
@@ -28,16 +28,6 @@
 
 .header__social {
     display: none !important;
-}
-
-.header__social ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: var(--bg-motor-second);
 }
 
 #navbar__main {
@@ -81,6 +71,10 @@
         display: block;
     }
 
+    .header__title h1 {
+        font-size: 4rem;
+    }
+
     .header__social {
         display: flex !important;
     }
@@ -107,13 +101,6 @@
         color: red !important;
     }
 
-    .header__social ul li a:hover {
-        transition: 0.4s ease;
-        transform: scale(1.15);
-        filter: brightness(1.1);
-        box-shadow: 0 4px 4px rgba(0,0,0,0.25);
-    }
-    
     .header__link:last-child {
         border-right: none;
     }

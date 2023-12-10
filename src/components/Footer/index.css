@@ -1,38 +1,16 @@
 .footer {
-    display: flex;
-    flex-flow: column;
-    row-gap: 4rem;
+    border-top: 1px solid var(--bg-motor-second);
 }
 
-.socialMedia .title,
-.infoBussiness .title {
-    padding: 0 !important;
-    margin: 0 0 1rem 0 !important;
+.footer__copyright {
+    /* outline: 4px solid white; */
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    font-weight: 400;
 }
 
-.socialMedia__content {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 1rem;
-}
-
-.socialMedia__link {
-    padding: 0.5rem;
-    background-color: var(--bg-motor-third);
-    border-radius: 50%;
-}
-
-@media screen and (min-width: 768px) {
-    .footer {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 2rem;
-    }
-}
-
-@media screen and (min-width: 990px) {
-    .footer {
-        display: grid;
-        grid-template-columns: 1fr 2fr 2fr;
-    }
+.footer__copyright span {
+    font-size: 0.75rem;
 }

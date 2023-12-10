@@ -35,17 +35,19 @@ body {
 .title {
   font-size: 2rem;
   font-family: 'Raleway', sans-serif;
-  padding: 0 2rem 4rem 2rem;
   text-wrap: wrap;
   color: white;
-  margin: 0 !important;
 }
 
 .paragraph,
 button,
-span {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
+span,
+p,
+a,
+li {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 1rem;
+  color: white;
   font-weight: 400 !important;
 }
 

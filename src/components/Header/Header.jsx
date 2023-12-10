@@ -2,6 +2,7 @@ import { Button, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import './index.css';
 import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { ButtonSocial } from '../ButtonSocial/ButtonSocial';
 
 export const Header = ({
     headerTitle = '',
@@ -27,14 +28,10 @@ export const Header = ({
                 <div className="header__social w-100 d-flex justify-content-end">
                     <ul className="list-inline m-0 p-0 d-flex align-items-center gap-4">
                         <li>
-                            <a href="https://www.facebook.com/MotorsZonePeru?mibextid=LQQJ4d" rel='noreferrer' target='_blank' title='Facebook Motor Zone'>
-                                <img src="./images/icon-facebook.svg" alt="Facebook Motor Zone" width={24} />
-                            </a>
+                            <ButtonSocial type={'facebook'} />
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/motorszoneperu/?igshid=YTQwZjQ0NmI0OA%3D%3D" rel='noreferrer' target='_blank' title='Instagram Motor Zone'>
-                                <img src="./images/icon-instagram.svg" alt="Instagram Motor Zone" width={24} />
-                            </a>
+                            <ButtonSocial type={'instagram'} />
                         </li>
                     </ul>
 
@@ -53,7 +50,7 @@ export const Header = ({
                             <img src="./images/icon-close.svg" alt="Motor Zone" width={36} />
                         </Button>
                     </Offcanvas.Header>
-                    <Offcanvas.Body>
+                    <Offcanvas.Body className='d-flex flex-column gap-3'>
                         <ul className='navBarMobile'>
                             <NavLink to={'/'} activeclassname='active' className='header__link--mobile'>Portada</NavLink>
                             <NavLink to={'/quienes-somos'} activeclassname='active' className='header__link--mobile'>¿Quienes Somos?</NavLink>
@@ -62,6 +59,10 @@ export const Header = ({
                             <NavLink to={'/linea-de-repuestos'} activeclassname='active' className='header__link--mobile'>Linea de Repuestos</NavLink>
                             <NavLink to={'/contactanos'} activeclassname='active' className='header__link--mobile'>Contactanos</NavLink>
                         </ul>
+                        <div className="navBarMobile__social d-flex gap-4" style={{marginLeft: '1.75rem'}}>
+                            <ButtonSocial type={'facebook'} />
+                            <ButtonSocial type={'instagram'} />
+                        </div>
                     </Offcanvas.Body>
                 </Offcanvas>
             </div>
