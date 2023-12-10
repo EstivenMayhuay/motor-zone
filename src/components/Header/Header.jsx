@@ -22,7 +22,9 @@ export const Header = ({
         <header className="header position-relative">
             <div className="header__top px-4 d-flex align-items-center mb-3">
                 <div className="header__logo">
-                    <img src="./images/logo-main.png" alt="" width={180} />
+                    <a href="/">
+                        <img src="./images/logo-main.png" alt="" width={180} />
+                    </a>
                 </div>
 
                 <div className="header__social w-100 d-flex justify-content-end">
