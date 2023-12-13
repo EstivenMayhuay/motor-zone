@@ -7,7 +7,7 @@ export const Home = () => {
     
     return <>
 
-        <Layout headerTitle="Taller Multimarca" headerImgSrc="bg-hero-main.jpg">
+        <Layout headerTitle="Excelente atención <br> para su vehículo" headerImgSrc="bg-hero-main.jpg">
             <section className="py-5 sectionHome">
                 <h1 className="title position-relative">Instalaciones</h1>
 

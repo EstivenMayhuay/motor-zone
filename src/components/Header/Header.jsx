@@ -1,6 +1,6 @@
 import { Button, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import './index.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { ButtonSocial } from '../ButtonSocial/ButtonSocial';
 
@@ -8,15 +8,23 @@ export const Header = ({
     headerTitle = '',
     headerImgSrc = ''
 }) => {
+    const [title, setTitle] = useState(headerTitle);
+    const [imgSrc, setImgSrc] = useState(headerImgSrc);
     const [showMenuMobile, setShowMenuMobile] = useState(false);
-
     const handleShowCanvas = () => setShowMenuMobile(true)
+    const location = useLocation();
+
+    const handleCarousel = (img, text) => {
+        setImgSrc(img);
+        setTitle(text);
+    }
 
     useEffect(() => {
         let header = document.querySelector(".header");
         header.style.backgroundImage = `linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.5) 74%, rgba(0,0,0,1) 100%),
-        url('../images/${headerImgSrc}')`;
-    }, [headerImgSrc])
+        url('../images/${imgSrc}')`;
+        header.style.animation = 'headerBg 2s';
+    }, [imgSrc, headerImgSrc])
 
     return (
         <header className="header position-relative">
@@ -97,8 +105,17 @@ export const Header = ({
             </div>
 
             <div className="header__title">
-                <h1>{headerTitle}</h1>
+                <h1 dangerouslySetInnerHTML={{__html: title}}></h1>
             </div>
+
+            {
+                location.pathname == '/' &&
+                <div className='position-absolute w-100 bottom-0 d-flex justify-content-center align-items-center p-2 gap-2' style={{marginBottom: '5rem'}}>
+                    <button className='btnCircle' onClick={() => handleCarousel('bg-hero-main.jpg', 'Excelente atención <br> para su vehículo')}></button>
+                    <button className='btnCircle' onClick={() => handleCarousel('bg-slide-portada-2.jpg', 'Calidad y Confianza <br> Garantía de servicio')}></button>
+                    <button className='btnCircle' onClick={() => handleCarousel('bg-slide-portada-3.jpg', 'Óptimo servicio con <br> Técnicos calificados')}></button>
+                </div>
+            }
         </header>
     )
 }
