@@ -7,7 +7,6 @@
     min-height: auto;
     aspect-ratio: 16/9;
     padding: 2rem 0;
-    animation: headerBg 0.15s linear;
     transition: all 0.4s linear;
 }
 
@@ -22,7 +21,7 @@
 
 
 .btnCircle {
-    --w-btn-circle: 24px;
+    --w-btn-circle: 20px;
     width: var(--w-btn-circle);
     height: var(--w-btn-circle);
     margin: 0;
@@ -33,8 +32,13 @@
     transition: all 0.4s ease;
 }
 
-.btnCircle:focus, .btnCircle:active {
+/* .btnCircle:focus,
+.btnCircle:active {
     background-color: white;
+} */
+
+.btnCircle.active {
+    background-color: var(--bg-motor-second);
 }
 
 

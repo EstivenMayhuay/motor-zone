@@ -6,25 +6,65 @@ import { ButtonSocial } from '../ButtonSocial/ButtonSocial';
 
 export const Header = ({
     headerTitle = '',
-    headerImgSrc = ''
+    headerImgSrc = 'bg-fachada.png'
 }) => {
     const [title, setTitle] = useState(headerTitle);
     const [imgSrc, setImgSrc] = useState(headerImgSrc);
     const [showMenuMobile, setShowMenuMobile] = useState(false);
-    const handleShowCanvas = () => setShowMenuMobile(true)
+    const handleShowCanvas = () => setShowMenuMobile(true);
     const location = useLocation();
+    const [index, setIndex] = useState(0);
+    const arrImages = ['bg-hero-main.jpg', 'bg-slide-portada-2.jpg', 'bg-slide-portada-3.jpg'];
+    const arrText = ['Excelente atención <br> para su vehículo', 'Calidad y Confianza <br> Garantía de servicio', 'Óptimo servicio con <br> Técnicos calificados'];
+    const NUM_IMAGES = arrImages.length - 1;
+    const [timeInterval, setTimeInterval]  = useState(0);
 
-    const handleCarousel = (img, text) => {
-        setImgSrc(img);
+    const handleCarousel = (e, img, text) => {
+        // setImgSrc(img);
         setTitle(text);
+
+        setTimeInterval(0);
+        clearInterval(timeInterval)
+
+        let activeBtn = document.querySelectorAll('.btnCircle.active');
+
+        let header = document.querySelector(".header");
+        header.style.backgroundImage = `linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.5) 74%, rgba(0,0,0,1) 100%),
+        url('../images/${img}')`;
+
+        activeBtn.forEach((btn) => btn.classList.remove('active'))
+
+        if(e.target.classList.contains('active')) {
+            e.target.classList.remove('active')
+        } else {
+            e.target.classList.add('active')
+        }
+    }
+
+    const carouselHome = () => {
+        let header = document.querySelector('.header');
+        let btnCircles = document.querySelectorAll('.btnCircle');
+        let activeBtn = document.querySelectorAll('.btnCircle.active');
+        
+        let timer = setTimeout(() => {
+            index === NUM_IMAGES ? setIndex(0) : setIndex(index + 1);
+        }, 2500)
+
+        // setImgSrc(arrImages[index]);
+        setTitle(arrText[index]);
+
+        activeBtn.forEach((btn) => btn.classList.remove('active'));
+        
+        header.style.backgroundImage = `linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.5) 74%, rgba(0,0,0,1) 100%),
+        url('../images/${arrImages[index]}')`;
+        btnCircles[index].classList.add('active');
+        
+        setTimeInterval(timer);
     }
 
     useEffect(() => {
-        let header = document.querySelector(".header");
-        header.style.backgroundImage = `linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.5) 74%, rgba(0,0,0,1) 100%),
-        url('../images/${imgSrc}')`;
-        header.style.animation = 'headerBg 2s';
-    }, [imgSrc, headerImgSrc])
+        // if(location.pathname === '/') carouselHome();
+    }, [index])
 
     return (
         <header className="header position-relative">
@@ -62,8 +102,8 @@ export const Header = ({
                     </Offcanvas.Header>
                     <Offcanvas.Body className='d-flex flex-column gap-3'>
                         <ul className='navBarMobile'>
-                            <NavLink to={'/'} activeclassname='active' className='header__link--mobile'>Portada</NavLink>
-                            <NavLink to={'/quienes-somos'} activeclassname='active' className='header__link--mobile'>¿Quienes Somos?</NavLink>
+                            <NavLink to={'/'} activeclassname='active' className='header__link--mobile'>¿Quienes Somos?</NavLink>
+                            <NavLink to={'/promociones'} activeclassname='active' className='header__link--mobile'>Promociones</NavLink>
                             <NavLink to={'/nuestros-clientes'} activeclassname='active' className='header__link--mobile'>Nuestros Clientes</NavLink>
                             <NavLink to={'/nuestros-servicios'} activeclassname='active' className='header__link--mobile'>Nuestros Servicios</NavLink>
                             <NavLink to={'/linea-de-repuestos'} activeclassname='active' className='header__link--mobile'>Linea de Repuestos</NavLink>
@@ -82,10 +122,10 @@ export const Header = ({
                     <Container>
                         <Nav className='m-auto header__nav'>
                             <NavLink to={'/'} activeclassname='active' className='header__link'>
-                                Portada
-                            </NavLink>
-                            <NavLink to={'/quienes-somos'} activeclassname='active' className='header__link'>
                                 ¿Quiénes Somos?
+                            </NavLink>
+                            <NavLink to={'/promociones'} activeclassname='active' className='header__link'>
+                                Promociones
                             </NavLink>
                             <NavLink to={'/nuestros-clientes'} activeclassname='active' className='header__link'>
                                 Nuestros Clientes
@@ -108,14 +148,14 @@ export const Header = ({
                 <h1 dangerouslySetInnerHTML={{__html: title}}></h1>
             </div>
 
-            {
+            {/* {
                 location.pathname == '/' &&
-                <div className='position-absolute w-100 bottom-0 d-flex justify-content-center align-items-center p-2 gap-2' style={{marginBottom: '5rem'}}>
-                    <button className='btnCircle' onClick={() => handleCarousel('bg-hero-main.jpg', 'Excelente atención <br> para su vehículo')}></button>
-                    <button className='btnCircle' onClick={() => handleCarousel('bg-slide-portada-2.jpg', 'Calidad y Confianza <br> Garantía de servicio')}></button>
-                    <button className='btnCircle' onClick={() => handleCarousel('bg-slide-portada-3.jpg', 'Óptimo servicio con <br> Técnicos calificados')}></button>
+                <div className='header__buttons position-absolute w-100 bottom-0 d-flex justify-content-center align-items-center p-2 gap-2' style={{marginBottom: '2rem'}}>
+                    <button className='btnCircle active' onClick={(e) => handleCarousel(e, 'bg-hero-main.jpg', 'Excelente atención <br> para su vehículo')}></button>
+                    <button className='btnCircle' onClick={(e) => handleCarousel(e, 'bg-slide-portada-2.jpg', 'Calidad y Confianza <br> Garantía de servicio')}></button>
+                    <button className='btnCircle' onClick={(e) => handleCarousel(e, 'bg-slide-portada-3.jpg', 'Óptimo servicio con <br> Técnicos calificados')}></button>
                 </div>
-            }
+            } */}
         </header>
     )
 }
