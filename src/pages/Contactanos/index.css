@@ -22,3 +22,16 @@
     height: 100%;
     background-color: var(--bg-motor-second);
 }
+
+.contactanos__info {
+}
+
+@media screen and (min-width: 768px) {
+    .contactanos__info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }    
+}
+
+@media screen and (min-width: 990px) {}

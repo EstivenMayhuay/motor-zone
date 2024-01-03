@@ -20,6 +20,10 @@
   background-color: var(--bg-motor-third) !important;
 }
 
+.color-second-motor {
+  color: var(--bg-motor-second) !important;
+}
+
 body {
   width: 100%;
   min-width: 100%;

@@ -6,7 +6,7 @@ import { ButtonSocial } from '../ButtonSocial/ButtonSocial';
 
 export const Header = ({
     headerTitle = '',
-    headerImgSrc = 'bg-fachada.png'
+    headerImgSrc = ''
 }) => {
     const [title, setTitle] = useState(headerTitle);
     const [imgSrc, setImgSrc] = useState(headerImgSrc);
@@ -14,8 +14,8 @@ export const Header = ({
     const handleShowCanvas = () => setShowMenuMobile(true);
     const location = useLocation();
     const [index, setIndex] = useState(0);
-    const arrImages = ['bg-hero-main.jpg', 'bg-slide-portada-2.jpg', 'bg-slide-portada-3.jpg'];
-    const arrText = ['Excelente atención <br> para su vehículo', 'Calidad y Confianza <br> Garantía de servicio', 'Óptimo servicio con <br> Técnicos calificados'];
+    const arrImages = ['bg-fachada.png', 'bg-fachada-2.png', 'bg-fachada-3.png'];
+    const arrText = ['EXCELENTE ATENCIÓN PARA SU VEHICULO', 'CALIDAD Y CONFIANZA GARANTIA DE SERVICIO', 'ÓPTIMO SERVICIO CON TÉCNICOS CALIFICADOS'];
     const NUM_IMAGES = arrImages.length - 1;
     const [timeInterval, setTimeInterval]  = useState(0);
 
@@ -63,8 +63,16 @@ export const Header = ({
     }
 
     useEffect(() => {
-        // if(location.pathname === '/') carouselHome();
-    }, [index])
+        if(location.pathname === '/') {
+            carouselHome();
+        }
+        else {
+            let header = document.querySelector(".header");
+            header.style.backgroundImage = `linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.5) 74%, rgba(0,0,0,1) 100%),
+            url('../images/${imgSrc}')`;
+        }
+
+    }, [imgSrc, index])
 
     return (
         <header className="header position-relative">
@@ -144,18 +152,18 @@ export const Header = ({
                 </Navbar>
             </div>
 
-            <div className="header__title">
+            <div className="header__title px-5">
                 <h1 dangerouslySetInnerHTML={{__html: title}}></h1>
             </div>
 
-            {/* {
+            {
                 location.pathname == '/' &&
                 <div className='header__buttons position-absolute w-100 bottom-0 d-flex justify-content-center align-items-center p-2 gap-2' style={{marginBottom: '2rem'}}>
-                    <button className='btnCircle active' onClick={(e) => handleCarousel(e, 'bg-hero-main.jpg', 'Excelente atención <br> para su vehículo')}></button>
-                    <button className='btnCircle' onClick={(e) => handleCarousel(e, 'bg-slide-portada-2.jpg', 'Calidad y Confianza <br> Garantía de servicio')}></button>
-                    <button className='btnCircle' onClick={(e) => handleCarousel(e, 'bg-slide-portada-3.jpg', 'Óptimo servicio con <br> Técnicos calificados')}></button>
+                    <button className='btnCircle active' onClick={(e) => handleCarousel(e, 'bg-fachada.png', 'EXCELENTE ATENCIÓN PARA SU VEHICULO')}></button>
+                    <button className='btnCircle' onClick={(e) => handleCarousel(e, 'bg-fachada-2.png', 'CALIDAD Y CONFIANZA GARANTIA DE SERVICIO')}></button>
+                    <button className='btnCircle' onClick={(e) => handleCarousel(e, 'bg-fachada-3.png', 'ÓPTIMO SERVICIO CON TÉCNICOS CALIFICADOS')}></button>
                 </div>
-            } */}
+            }
         </header>
     )
 }
