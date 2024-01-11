@@ -3,7 +3,7 @@ import './index.css'
 
 export const LineaDeRepuestos = () => {
     return <>
-        <Layout headerTitle="LINEA DE REPUESTOS" headerImgSrc="bg-fachada-linea-de-repuestos.jpg">
+        <Layout headerTitle="Linea de Repuestos" headerImgSrc="bg-fachada-linea-de-repuestos.jpg">
             <section>
                 <h1 className="text-white pb-5">Linea de Repuestos</h1>
 

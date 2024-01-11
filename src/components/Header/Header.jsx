@@ -6,7 +6,8 @@ import { ButtonSocial } from '../ButtonSocial/ButtonSocial';
 
 export const Header = ({
     headerTitle = '',
-    headerImgSrc = ''
+    headerImgSrc = '',
+    headerText = ''
 }) => {
     const [title, setTitle] = useState(headerTitle);
     const [imgSrc, setImgSrc] = useState(headerImgSrc);
@@ -15,7 +16,19 @@ export const Header = ({
     const location = useLocation();
     const [index, setIndex] = useState(0);
     const arrImages = ['bg-fachada.png', 'bg-fachada-2.png', 'bg-fachada-3.png'];
-    const arrText = ['EXCELENTE ATENCIÓN PARA SU VEHICULO', 'CALIDAD Y CONFIANZA GARANTIA DE SERVICIO', 'ÓPTIMO SERVICIO CON TÉCNICOS CALIFICADOS'];
+    const arrText = ['Excelente Atención para su Vehículo', 'Calidad y Confianza Garantía de Servicio', 'Óptimo Servicio con Técnicos Calificados'];
+    const arrInfo = [
+        <>
+            <ul className="text-left" style={{listStyle: "none"}}>
+                <li>Mecanica en General</li>
+                <li>Mantenimiento</li>
+                <li>Preventivo / Correctivo</li>
+                <li>Alineamiento De Direccion</li>
+                <li>Planchado y Pintura</li>
+            </ul>
+        </>
+    ];
+
     const NUM_IMAGES = arrImages.length - 1;
     const [timeInterval, setTimeInterval]  = useState(0);
 
@@ -154,14 +167,24 @@ export const Header = ({
 
             <div className="header__title px-5">
                 <h1 dangerouslySetInnerHTML={{__html: title}}></h1>
+                {
+                    title === "Excelente Atención para su Vehículo" &&
+                    <ul className="d-block text-left" style={{listStyle: "none"}}>
+                        <li>Mecanica en General</li>
+                        <li>Mantenimiento</li>
+                        <li>Preventivo / Correctivo</li>
+                        <li>Alineamiento De Direccion</li>
+                        <li>Planchado y Pintura</li>
+                    </ul>
+                }
             </div>
 
             {
                 location.pathname == '/' &&
                 <div className='header__buttons position-absolute w-100 bottom-0 d-flex justify-content-center align-items-center p-2 gap-2' style={{marginBottom: '2rem'}}>
-                    <button className='btnCircle active' onClick={(e) => handleCarousel(e, 'bg-fachada.png', 'EXCELENTE ATENCIÓN PARA SU VEHICULO')}></button>
-                    <button className='btnCircle' onClick={(e) => handleCarousel(e, 'bg-fachada-2.png', 'CALIDAD Y CONFIANZA GARANTIA DE SERVICIO')}></button>
-                    <button className='btnCircle' onClick={(e) => handleCarousel(e, 'bg-fachada-3.png', 'ÓPTIMO SERVICIO CON TÉCNICOS CALIFICADOS')}></button>
+                    <button className='btnCircle active' onClick={(e) => handleCarousel(e, 'bg-fachada.png', 'Excelente Atención para su Vehículo')}></button>
+                    <button className='btnCircle' onClick={(e) => handleCarousel(e, 'bg-fachada-2.png', 'Calidad y Confianza Garantía de Servicio')}></button>
+                    <button className='btnCircle' onClick={(e) => handleCarousel(e, 'bg-fachada-3.png', 'Óptimo Servicio con Técnicos Calificados')}></button>
                 </div>
             }
         </header>

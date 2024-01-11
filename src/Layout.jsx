@@ -6,10 +6,11 @@ import { ButtonWhatsapp } from './components/ButtonWhatsapp'
 export const Layout = ({
     headerTitle = '',
     headerImgSrc = '',
+    headerText = '',
     children
 }) => {
     return <>
-        <Header headerTitle={headerTitle} headerImgSrc={headerImgSrc} />
+        <Header headerTitle={headerTitle} headerImgSrc={headerImgSrc} headerText={headerText} />
 
         <main>
             {children}

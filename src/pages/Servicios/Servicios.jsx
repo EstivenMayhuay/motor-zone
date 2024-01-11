@@ -3,7 +3,7 @@ import { Layout } from "../../Layout"
 
 export const Servicios = () => {
     return <>
-        <Layout headerTitle="NUESTROS SERVICIOS" headerImgSrc="bg-nuestros-servicios.jpg" >
+        <Layout headerTitle="Nuestros Servicios" headerImgSrc="bg-nuestros-servicios.jpg" >
             <section className="nuestrosServicios">
                 <h1 className="title">Servicios</h1>
 

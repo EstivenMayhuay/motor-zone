@@ -6,7 +6,7 @@ import { ButtonSocial } from "../../components/ButtonSocial/ButtonSocial";
 
 export const Contactanos = () => {
     return <>
-        <Layout headerTitle="CONTACTANOS" headerImgSrc="bg-fachada-contactanos.png">
+        <Layout headerTitle="Contactanos" headerImgSrc="bg-fachada-contactanos.png">
             <section className="contactanos">
                 <article>
                     <h1 className="title m-0 p-0"> Mapa de Ubicación</h1>
