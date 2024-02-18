@@ -1,12 +1,13 @@
 import { Layout } from "../../Layout"
+import { Hero } from "../../components/Hero"
 import './index.css'
 
 export const LineaDeRepuestos = () => {
     return <>
-        <Layout headerTitle="Linea de Repuestos" headerImgSrc="bg-fachada-linea-de-repuestos.jpg">
-            <section>
-                <h1 className="text-white pb-5">Linea de Repuestos</h1>
+        <Layout>
+            <Hero title={"Linea de Repuestos"} img={"bg-fachada-linea-de-repuestos.jpg"} />
 
+            <section>
                 <article>
                     <ul>
                         <li>Somos Especialitas en repuestos originales y alternativos.</li>

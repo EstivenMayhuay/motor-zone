@@ -1,16 +1,28 @@
 .footer {
-    border-top: 1px solid var(--bg-motor-second);
+    border-top: 2px solid var(--bg-motor-second);
 }
 
-.footer__copyright {
-    /* outline: 4px solid white; */
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: #ddd;
-    font-weight: 400;
+.footerSubMenu__title {
+    position: relative;
+}
+
+.footerSubMenu__title::after {
+    position: absolute;
+    content: '';
+    bottom: -25%;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: var(--bg-motor-second);
 }
 
 .footer__copyright span {
     font-size: 0.75rem;
+}
+
+@media screen and (min-width: 760px) {
+    .contentFooter {
+        display: grid !important;
+        grid-template-columns: auto 1fr 1fr 1fr;
+    }    
 }

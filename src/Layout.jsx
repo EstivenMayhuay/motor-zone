@@ -3,14 +3,9 @@ import { Header } from "./components/Header/Header"
 import { Footer } from "./components/Footer"
 import { ButtonWhatsapp } from './components/ButtonWhatsapp'
 
-export const Layout = ({
-    headerTitle = '',
-    headerImgSrc = '',
-    headerText = '',
-    children
-}) => {
+export const Layout = ({children}) => {
     return <>
-        <Header headerTitle={headerTitle} headerImgSrc={headerImgSrc} headerText={headerText} />
+        <Header/>
 
         <main>
             {children}

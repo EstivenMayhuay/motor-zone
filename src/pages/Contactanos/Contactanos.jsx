@@ -1,16 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendar, faMapLocation, faMessage, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faCalendar, faMapLocation, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Layout } from "../../Layout";
-import './index.css';
 import { ButtonSocial } from "../../components/ButtonSocial/ButtonSocial";
+import { Hero } from '../../components/Hero'
+import './index.css';
 
 export const Contactanos = () => {
     return <>
-        <Layout headerTitle="Contactanos" headerImgSrc="bg-fachada-contactanos.png">
+        <Layout>
+            <Hero title={"Contactanos"} img={"bg-fachada-contactanos.png"} />
+            
             <section className="contactanos">
                 <article>
-                    <h1 className="title m-0 p-0"> Mapa de Ubicación</h1>
-
                     <div className="contactanos__info">
                         <div className="paragraph text-white d-flex flex-column gap-2">
                             <span className="d-flex gap-3">
@@ -20,7 +21,7 @@ export const Contactanos = () => {
 
                             <span className="d-flex gap-3">
                                 <FontAwesomeIcon icon={faPhone} size="lg" className="color-second-motor" />
-                                920288419 / 993162796 / 999183000
+                                987200467 - 920288419 - 993162796 - 999183000
                             </span>
 
                             <span className="d-flex gap-3">

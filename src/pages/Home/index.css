@@ -24,6 +24,10 @@
     object-fit: cover;
 }
 
+.modal-content {
+    background: transparent;
+}
+
 @media screen and (min-width: 768px) {
     .instalacionesContent {
         display: grid;

@@ -1,139 +1,21 @@
-.header {
-    background-image:
-    linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.5) 74%, rgba(0,0,0,1) 100%),
-    url('../images/bg-fachada.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: auto;
-    aspect-ratio: 16/9;
-    padding: 2rem 0;
-    transition: all 0.4s linear;
-}
-
-@keyframes headerBg {
-    0% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-
-.btnCircle {
-    --w-btn-circle: 20px;
-    width: var(--w-btn-circle);
-    height: var(--w-btn-circle);
-    margin: 0;
-    background-color: transparent;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid white;
-    transition: all 0.4s ease;
-}
-
-/* .btnCircle:focus,
-.btnCircle:active {
-    background-color: white;
-} */
-
-.btnCircle.active {
-    background-color: var(--bg-motor-second);
-}
-
-
-.header__title {
-    width: 100%;
-    margin: 6rem 0;
-    text-align: center;
-    color: white;
-    font-weight: 600;
-    font-family: 'Raleway', sans-serif;
-    font-style: italic;
-}
-
-.header__button {
+.contentMobile {
     display: flex;
-    justify-content: end;
-    width: 100%;
 }
 
-.header__social {
-    display: none !important;
+.offcanvas-header .btn-close{
+    color: white !important;
+    background: white;
 }
 
-#navbar__main {
-    display: none;
+.btn-close {
+    background-color: red !important;
 }
 
-.header__nav {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    width: 100%;
-    padding: 0.5rem 0;
-    overflow-x: scroll;
-}
-
-.header__nav::-webkit-scrollbar {
-    display: none;
-}
-
-.navBarMobile {
-    display: flex;
-    flex-flow: column;
-    row-gap: 1rem;
-}
-
-.navBarMobile .header__link--mobile {
+.header__link--mobile {
     color: white;
     text-decoration: none;
-    font-weight: 600;
 }
 
-.navBarMobile .header__link--mobile.active {
+.active {
     color: var(--bg-motor-second);
-}
-
-@media screen and (min-width: 768px) {
-    
-}
-
-@media screen and (min-width: 990px) {
-    #navbar__main {
-        display: block;
-    }
-
-    .header__title h1 {
-        font-size: 4rem;
-    }
-
-    .header__social {
-        display: flex !important;
-    }
-
-    #navbar__main--mobile,
-    .header__button {
-        display: none;
-    }
-
-    .header__link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 180px;
-        color: white;
-        font-size: 0.8rem;
-        text-decoration: none;
-        font-weight: 600;
-        border-right: 1px solid #eee;
-    }
-    
-    a.header__link:hover,
-    a.header__link.active {
-        color: red !important;
-    }
-
-    .header__link:last-child {
-        border-right: none;
-    }
 }

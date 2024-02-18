@@ -3,7 +3,7 @@
   --bg-motor-second: rgba(223, 32, 77, 1);
   --bg-motor-third: #E8F5E6; 
 
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 
   box-sizing: border-box;
 }
@@ -50,7 +50,7 @@ p,
 a,
 li {
   font-family: 'Roboto', sans-serif !important;
-  font-size: 1rem;
+  font-size: 0.925rem !important;
   color: white;
   font-weight: 400 !important;
 }
