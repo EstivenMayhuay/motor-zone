@@ -1,0 +1,34 @@
+.carousel-item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        height: 400px;
+    }
+    
+    .carousel-item {
+        height: 100%;
+    }
+    
+    img.d-block.w-100.imagesSlider, .carousel-inner {
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-caption {
+        transform: translateY(-120px);
+    }
+
+    .carousel-caption .carousel-title {
+        font-size: 3rem !important;
+    }
+}
