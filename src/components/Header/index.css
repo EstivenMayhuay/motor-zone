@@ -1,5 +1,9 @@
-.contentMobile {
-    display: flex;
+.navBarDesktop {
+    display: none;
+}
+
+header .header__social {
+    display: none !important;
 }
 
 .offcanvas-header .btn-close{
@@ -11,6 +15,14 @@
     background-color: red !important;
 }
 
+.header__link {
+    width: 100%;
+    text-align: center;
+    border-right: 2px solid white;
+    text-decoration: none;
+    color: white;
+}
+
 .header__link--mobile {
     color: white;
     text-decoration: none;
@@ -18,4 +30,22 @@
 
 .active {
     color: var(--bg-motor-second);
+}
+
+@media screen and (min-width: 768px) {
+    .header__button button {
+        display: none;
+    }
+
+    header .header__social {
+        display: flex !important;
+    }
+
+    .navBarDesktop {
+        display: flex;
+    }
+
+    .header__link:nth-child(6) {
+        border: none;
+    }
 }

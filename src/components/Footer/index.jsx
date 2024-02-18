@@ -30,7 +30,7 @@ export const Footer = () => {
                 <ul style={{listStyle: 'none'}} className='p-0 m-0'>
                     <li className='d-flex gap-2 align-items-center'>
                         <FontAwesomeIcon icon={faPhone} />
-                        <span>987200467</span>
+                        <span>920288419</span>
                     </li>
                 </ul>
             </div>
