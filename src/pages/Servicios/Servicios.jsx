@@ -59,7 +59,7 @@ export const Servicios = () => {
             <Hero title={"Nuestros Servicios"} img={"bg-nuestros-servicios.jpg"} />
 
             <section className="nuestrosServicios">
-                <ul className="d-flex flex-wrap gap-4 p-0 contentServicios">
+                <ul className="d-flex flex-wrap gap-4 p-0 contentServicios justify-content-center">
                     {
                         services.map((s, index) => (
                             <ServicioCard key={index} title={s.title} img={s.img} description={s.descp} />
