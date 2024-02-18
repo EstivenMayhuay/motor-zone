@@ -5,7 +5,7 @@ import './index.css'
 export const LineaDeRepuestos = () => {
     return <>
         <Layout>
-            <Hero title={"Linea de Repuestos"} img={"bg-fachada-linea-de-repuestos.jpg"} />
+            <Hero title={"LINEA DE REPUESTOS"} img={"bg-fachada-linea-de-repuestos.jpg"} />
 
             <section>
                 <article>

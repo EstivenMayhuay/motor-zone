@@ -56,7 +56,7 @@ export const Servicios = () => {
 
     return <>
         <Layout>
-            <Hero title={"Nuestros Servicios"} img={"bg-nuestros-servicios.jpg"} />
+            <Hero title={"NUESTROS SERVICIOS"} img={"bg-nuestros-servicios.jpg"} />
 
             <section className="nuestrosServicios">
                 <ul className="d-flex flex-wrap gap-4 p-0 contentServicios justify-content-center">

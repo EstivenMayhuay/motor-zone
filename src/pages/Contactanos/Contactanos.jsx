@@ -1,14 +1,14 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendar, faMapLocation, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { Layout } from "../../Layout";
-import { ButtonSocial } from "../../components/ButtonSocial/ButtonSocial";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCalendar, faMapLocation, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { Layout } from "../../Layout"
+import { ButtonSocial } from "../../components/ButtonSocial/ButtonSocial"
 import { Hero } from '../../components/Hero'
 import './index.css';
 
 export const Contactanos = () => {
     return <>
         <Layout>
-            <Hero title={"Contactanos"} img={"bg-fachada-contactanos.png"} />
+            <Hero title={"CONTÁCTANOS"} img={"bg-fachada-contactanos.png"} />
             
             <section className="contactanos">
                 <article>

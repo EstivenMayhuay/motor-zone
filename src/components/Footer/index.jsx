@@ -1,12 +1,14 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ListBrands } from '../ListBrands';
-import './index.css';
-import { faMapLocation, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { ListBrands } from '../ListBrands'
+import { faMapLocation, faPhone } from '@fortawesome/free-solid-svg-icons'
+import './index.css'
 
 export const Footer = () => {
     const date = (new Date()).getFullYear();
 
     return <footer className="footer p-0 pt-5 d-flex flex-column gap-4">
+        <ListBrands />
+        
         <div className="contentFooter d-flex flex-column gap-5 py-5">
             <div className="px-4">
                 <img src="./images/logo-main.png" alt="" width={140} />
@@ -18,7 +20,7 @@ export const Footer = () => {
                 <ul style={{listStyle: 'none'}} className='p-0 m-0'>
                     <li>Mantenimiento Correctivo</li>
                     <li>Mantenimiento Preventivo</li>
-                    <li>Modificacion de Carroceria</li>
+                    <li>Modificación de Carrocería</li>
                     <li>Restauraciones</li>
                     <li>Electrónica</li>
                 </ul>

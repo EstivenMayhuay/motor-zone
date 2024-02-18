@@ -18,6 +18,8 @@ header .header__social {
 .header__link {
     width: 100%;
     text-align: center;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
     border-right: 2px solid white;
     text-decoration: none;
     color: white;
