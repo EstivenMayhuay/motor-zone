@@ -62,17 +62,15 @@ export const QuienesSomos = () => {
                 </article>
 
                 <article className="d-flex flex-column gap-4">
-                    <h1 className="title text-center mb-3">NUESTRA MISION Y VISION</h1>
+                    <h1 className="title text-center mb-3">MISIÓN</h1>
 
-                    <div>
-                        <h2 className="text-center title color-second-motor">Misión</h2>
-                        <p className="w-75 m-auto paragraph text-center">Satisfacer las necesidades de nuestros clientes, superar sus expectativas a través de un servicio de calidad en constante mejora.</p>
-                    </div>
+                    <p className="w-75 m-auto paragraph text-center">Satisfacer las necesidades de nuestros clientes, superar sus expectativas a través de un servicio de calidad en constante mejora.</p>
+                </article>
 
-                    <div>
-                        <h2 className="color-second-motor title text-center">Visión</h2>
-                        <p className="paragraph w-75 m-auto text-center">Ser la empresa líder en el mercado nacional de servicios automotrices sin descuidar nuestra rentabilidad, productividad y socialmente responsable para el crecimiento y desarrollo del país.</p>
-                    </div>
+                <article className="d-flex flex-column gap-4">
+                    <h1 className="title text-center mb-3">VISIÓN</h1>
+                    
+                    <p className="paragraph w-75 m-auto text-center">Ser la empresa líder en el mercado nacional de servicios automotrices sin descuidar nuestra rentabilidad, productividad y socialmente responsable para el crecimiento y desarrollo del país.</p>
                 </article>
             </section>
         </Layout>

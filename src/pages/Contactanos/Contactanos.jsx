@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCalendar, faMapLocation, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faCalendar, faMailBulk, faMapLocation, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { Layout } from "../../Layout"
 import { ButtonSocial } from "../../components/ButtonSocial/ButtonSocial"
 import { Hero } from '../../components/Hero'
@@ -21,12 +21,17 @@ export const Contactanos = () => {
 
                             <span className="d-flex gap-3">
                                 <FontAwesomeIcon icon={faPhone} size="lg" className="color-second-motor" />
-                                987200467 - 920288419 - 993162796 - 999183000
+                                993520708 - 920288419- 932508814
                             </span>
 
                             <span className="d-flex gap-3">
                                 <FontAwesomeIcon icon={faCalendar} size="lg" className="color-second-motor" />
                                 Lun a Vie 8:00am a 6pm Sáb: 8am a 1pm
+                            </span>
+
+                            <span className="d-flex gap-3">
+                                <FontAwesomeIcon icon={faMailBulk} size="lg" className="color-second-motor" />
+                                comercial@motorszoneperu.com
                             </span>
 
                             <div className="d-flex my-4 gap-3">

@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ListBrands } from '../ListBrands'
-import { faMapLocation, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faMailBulk, faMapLocation, faPhone } from '@fortawesome/free-solid-svg-icons'
 import './index.css'
 
 export const Footer = () => {
@@ -32,7 +32,19 @@ export const Footer = () => {
                 <ul style={{listStyle: 'none'}} className='p-0 m-0'>
                     <li className='d-flex gap-2 align-items-center'>
                         <FontAwesomeIcon icon={faPhone} />
+                        <span>993520708</span>
+                    </li>
+                    <li className='d-flex gap-2 align-items-center'>
+                        <FontAwesomeIcon icon={faPhone} />
                         <span>920288419</span>
+                    </li>
+                    <li className='d-flex gap-2 align-items-center'>
+                        <FontAwesomeIcon icon={faPhone} />
+                        <span>932508814</span>
+                    </li>
+                    <li className='d-flex gap-2 align-items-center'>
+                        <FontAwesomeIcon icon={faMailBulk} />
+                        <span>comercial@motorszoneperu.com</span>
                     </li>
                 </ul>
             </div>
