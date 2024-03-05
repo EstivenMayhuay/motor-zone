@@ -14,6 +14,21 @@ export const NuestrosClientes = () => {
                         <img src="/images/cliente_panamericana.png" alt="" width={180} />
                         <img src="/images/cliente_rimac_seguros.png" alt="" width={180} />
                         <img src="/images/cliente_la_positiva.png" alt="" width={180} />
+                        <img src="/images/cliente_ministerio_magistatura.jpg" alt="" width={180} />
+                        <img src="/images/cliente_congreso_republica.jpg" alt="" width={180} />
+                        <img src="/images/cliente_mtc.svg" alt="" width={180} />
+                        <img src="/images/cliente_marina_peru.png" alt="" width={180} />
+                        <img src="/images/cliente_dhl.png" alt="" width={180} />
+                        <img src="/images/cliente_pets_place.png" alt="" width={180} />
+                        <img src="/images/cliente_america.webp" alt="" width={180} />
+                        <img src="/images/cliente_motaengil.png" alt="" width={180} />
+                        <img src="/images/cliente_san_pablo.png" alt="" width={180} />
+                        <img src="/images/cliente_tv_peru.png" alt="" width={180} />
+                        <img src="/images/cliente_rpp.png" alt="" width={180} />
+                        <img src="/images/cliente_campo_fe.png" alt="" width={180} />
+                        <img src="/images/cliente_cafae.jpg" alt="" width={180} />
+                        <img src="/images/cliente_hdm.png" alt="" width={180} />
+                        <img src="/images/cliente_bomberos.jpg" alt="" width={180} />
                     </div>
                 </article>
             </section>
