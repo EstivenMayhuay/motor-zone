@@ -39,10 +39,6 @@ export const Footer = () => {
                         <span>920288419</span>
                     </li>
                     <li className='d-flex gap-2 align-items-center'>
-                        <FontAwesomeIcon icon={faPhone} />
-                        <span>932508814</span>
-                    </li>
-                    <li className='d-flex gap-2 align-items-center'>
                         <FontAwesomeIcon icon={faMailBulk} />
                         <span>comercial@motorszoneperu.com</span>
                     </li>

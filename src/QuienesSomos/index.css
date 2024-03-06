@@ -8,6 +8,17 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-inner .imagesSlider {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 @media screen and (max-width: 768px) {
     .carousel {
@@ -18,8 +29,9 @@
         height: 100%;
     }
     
-    img.d-block.w-100.imagesSlider, .carousel-inner {
-        height: 100%;
+    img.d-block.w-100.imagesSlider,
+    .carousel-inner {
+        /* height: 100%; */
     }
 }
 
