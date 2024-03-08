@@ -43,4 +43,11 @@
     .carousel-caption .carousel-title {
         font-size: 3rem !important;
     }
+
+    .carousel-inner .imagesSlider {
+        display: block;
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
 }

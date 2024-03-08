@@ -9,7 +9,11 @@ export const Home = () => {
     return <>
 
         <Layout>
-            <Hero title={"EXCELENTE ATENCIÓN PARA SU VEHÍCULO"} img={"promociones-general.svg"} />
+            <Hero title={"EXCELENTE ATENCIÓN PARA SU VEHÍCULO"} img={"bg_promociones.jpeg"} phrase={<ul>
+                <li>Diagnóstico Gratis</li>
+                <li>Recojo y Entrega Gratis</li>
+                <li>Beneficios Coorporativos</li>
+            </ul>} />
 
             <section className="py-5 sectionHome">
                 <article className="instalacionesContent my-4">
